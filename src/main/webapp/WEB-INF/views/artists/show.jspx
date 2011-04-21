@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_musicdiscs_domain_Artist" object="${artist}" path="/artists" z="SoMkEe/0gra3dJpqvCAUoEANDn8=">
+        <field:display field="name" id="s_musicdiscs_domain_Artist_name" object="${artist}" z="jZESPpIZ8pDKy3ykE+TL4i5aLDI="/>
+        <field:display field="origin" id="s_musicdiscs_domain_Artist_origin" object="${artist}" z="gZ3IMQGetxVqk11kvi3s3EIzuMs="/>
+    </page:show>
+</div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- <param name="ConversionPattern" value="%.15X{ipAddress}-%.9X{username} %-5p %c{1} - %m%n" />  -->
+			<param name="ConversionPattern" value="%d{ISO8601} %5p %t %C.%M - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<!-- param name="File" value="${ch.post.it.logging.dir}/MusicDiscs.log" /-->
+		<param name="File" value="c:/tmp/MusicDiscs.log" />
+		<param name="DatePattern" value="dd.MM.yyyy" />
+		<param name="Append" value="true" />
+		<layout
+			class="org.apache.log4j.PatternLayout">
+			<param name="ApplicationName" value="TT" />
+			<param name="ConversionPattern" value="%d{ISO8601} %5p %t %C.%M - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="net.sf.jasperreports">
+		<level value="warn"/>
+	</logger>
+	
+	<logger name="org.apache.tiles">
+		<level value="warn"/>
+	</logger>
+	
+	<logger name="org.apache.commons.digester">
+		<level value="warn"/>
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="warn" />
+	</logger>
+
+	<logger name="org.quartz">
+		<level value="warn" />
+	</logger>
+
+	<logger name="ch.post.it">
+		<level value="info" />
+	</logger>
+	
+	<logger name="ch.post.its">
+		<level value="info" />
+	</logger>
+
+	<logger name="musicdiscs.web">
+		<level value="debug" />
+	</logger>
+
+	<root>
+		<priority value="warn" />
+ 		<appender-ref ref="console" /> 
+		<appender-ref ref="FileAppender" />
+	</root>
+
+</log4j:configuration>

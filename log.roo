@@ -1,0 +1,67 @@
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-03-24 14:19:55
+project --topLevelPackage musicdiscs --projectName MusicDiscs --java 6
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-03-24 14:19:57
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-03-24 14:20:04
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.domain.Track
+field string --fieldName name --notNull
+field number --fieldName length --type java.lang.Float
+field string --fieldName writer
+entity --class ~.domain.Artist
+field string --fieldName name --notNull 
+field string --fieldName origin
+entity --class ~.domain.Album
+field string --fieldName title  --notNull
+field set --fieldName tracks --type ~.domain.Track 
+field date --fieldName released --type java.util.Date 
+field reference --fieldName artist --type ~.domain.Artist
+entity --class ~.domain.Track --testAutomatically
+field string --fieldName title --notNull 
+field number --fieldName length --type java.lang.Float 
+field string --fieldName writer
+entity --class ~.domain.Artist --testAutomatically
+field string --fieldName name --notNull
+field string --fieldName origin
+entity --class ~.domain.Album --testAutomatically 
+field string --fieldName title --notNull 
+field set --fieldName tracks --type ~.domain.Track
+field reference --fieldName artist --type ~.domain.Artist
+field string --fieldName albumType
+field date --fieldName released --type java.util.Date
+field number --fieldName length --type java.lang.Float
+field string --fieldName label 
+perform tests
+controller all --package ~.web
+quit
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-03-25 09:01:09
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-03-25 10:33:14
+// [failed] field number --fieldName number --class ~.domain.Track --type java.lang.Integer --notNull 
+field number --fieldName nr --class ~.domain.Track --type java.lang.Integer --notNull 
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-03-28 17:01:59
+hint
+hint controllers
+controller class --class ~.web.provaController
+field number --fieldName p --class ~.domain.Album --type int --max 5
+hint
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-03-31 11:37:48
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-03-31 11:40:32
+controller class --class ~.web.provaController
+controller class --class ~.web.provaController
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-01 16:03:32
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-18 09:32:17
+hint
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-18 10:18:05
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-18 10:23:24
+field number --fieldName vote --class ~.domain.Album --type java.lang.Float
+hint controllers
+controller class --class ~.web.NewController 
+hint fields
+field number --fieldName ciao --type float --min 2 --max 6
+controller class --class ~.web.CommentController
+hint
+hint topics
+hint security
+controller class --class ~.web.ShowComments
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-20 16:21:08
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-21 09:51:42
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-21 09:58:19

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_musicdiscs_domain_Track" items="${tracks}" z="FoTwIbE2aOV877x7upimS/0Knf0=">
+        <table:table data="${tracks}" id="l_musicdiscs_domain_Track" path="/tracks" z="8h44XBsVeQ/3gaGYHJSvzCi/Pp4=">
+            <table:column id="c_musicdiscs_domain_Track_nr" property="nr" z="H2fafDC7hRPYUjY/ngVZu75Jugw="/>
+            <table:column id="c_musicdiscs_domain_Track_title" property="title" z="v5emLakEQWfIKS8izpbpEzIHnoM="/>
+            <table:column id="c_musicdiscs_domain_Track_length" property="length" z="2WVH1zwaMt57QjI/VG1wIotY/Ro="/>
+            <table:column id="c_musicdiscs_domain_Track_writer" property="writer" z="dRavrtzC7eTohfUiKzlIZnkQCHw="/>
+        </table:table>
+    </page:list>
+</div>

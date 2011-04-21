@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions"  xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/anna" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_prova_index" htmlEscape="false" var="title"/>
+  <util:panel id="title" title="${title}">
+    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+    <h3>
+      <spring:message arguments="${app_name}" text="Rate!"/>
+    </h3>
+	<script type="text/javascript">
+					function vote(id){
+						var vote=document.getElementById("vote"+id).value;
+						window.location="/MusicDiscs/prova/vote/"+id+"?vote="+vote;
+					}
+				</script>
+	<table>
+		<c:forEach items="${albums}" var="item">
+			<tr>
+				<th>Album tile</th>
+				<th>Your rate</th>
+				<th>Average rate</th>
+				<th></th>
+			</tr>
+	        <tr>
+
+	          <td>
+	             <spring:eval expression="item.title" />
+	            </td>
+	          <td>
+	          	 <spring:eval var="currId" expression="item.id" />
+	          	 <input type="hidden" value="voteFor${currId}"/>
+	             <input type="text" maxlength="3" id="vote${currId}"/>
+	            </td>
+	            <td>
+	          	 <spring:eval expression="item.vote" />
+	             
+	            </td>
+	            
+				<td>
+				
+					<spring:eval var="currId" expression="item.id" />
+					 <input type="button" name="vote" value="vote!" onclick="vote(${currId})"/>
+				</td>
+			</tr>
+		</c:forEach>        
+	</table>
+
+	
+  </util:panel>
+</div>

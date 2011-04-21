@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:fields="urn:jsptagdir:/WEB-INF/tags/form/anna" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+  <style type="text/css">
+  		input{
+  			margin: 10px;
+  		}
+  		select{
+  			margin: 10px;
+  			width: 300px;
+  		}
+  		label{
+  			width: 100px;
+  			margin-top: 10px;
+  		}
+  		#comment{
+  			height: 40px;
+  			width: 300px;
+  		}
+  </style>
+	<spring:message code="label_new_index" htmlEscape="false" var="title" />
+	<util:panel id="title" title="${title}">
+		<spring:message code="application_name" htmlEscape="false"
+			var="app_name" />
+		<h3>
+			<spring:message arguments="${app_name}" text="Choose an album and add a comment"/>
+		</h3>
+		
+		<form method="post" action="/MusicDiscs/comment/tryPost">
+		<label>Album</label>
+			<select name="id">
+				<c:forEach items="${albums}" var="album">
+					<spring:eval expression="album.title" var="title" />
+					<spring:eval expression="album.artist.name" var="artist" />
+					<spring:eval expression="album.id" var="id" />
+					<option value="${id}">${title} / ${artist}</option>
+				</c:forEach>
+			</select> 
+			<br/> 
+			<label>Comment</label>
+			<input type="text" id="comment" name="commenta"></input>
+			<br/> 
+			<input type="submit" value="submit" />
+		</form>
+	</util:panel>
+</div>

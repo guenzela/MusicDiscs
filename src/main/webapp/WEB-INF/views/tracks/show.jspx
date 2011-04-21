@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_musicdiscs_domain_Track" object="${track}" path="/tracks" z="PVk+kgHXC9x+s8tAhf8Tz4T4lq4=">
+		<field:display field="nr" id="s_musicdiscs_domain_Track_nr" object="${track}" z="oo6KuykwHwm7f4UKRBv+UNjOJNQ="/>
+		<field:display field="title" id="s_musicdiscs_domain_Track_title" object="${track}" z="jjo6k8VDwZE28XF/3Wudqp6siRk="/>
+        <field:display field="length" id="s_musicdiscs_domain_Track_length" object="${track}" z="NYuXkARjyBmz+BJML9BL5I+0230="/>
+        <field:display field="writer" id="s_musicdiscs_domain_Track_writer" object="${track}" z="s4x0UvU84VYqvu+KmQzsRM3uoOI="/>    
+    </page:show>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_musicdiscs_domain_Artist" items="${artists}" z="55MbEAPF/ugs/trtXmT1JErHECU=">
+        <table:table data="${artists}" id="l_musicdiscs_domain_Artist" path="/artists" z="EvEjNARtrTHpzoGp5S7N0vh56tQ=">
+            <table:column id="c_musicdiscs_domain_Artist_name" property="name" z="1lNRK4F+kJXUY3TKxq6yAumgxbs="/>
+            <table:column id="c_musicdiscs_domain_Artist_origin" property="origin" z="Bko8ORdHUGfVSUOfWIYFm3zzGfg="/>
+        </table:table>
+    </page:list>
+</div>

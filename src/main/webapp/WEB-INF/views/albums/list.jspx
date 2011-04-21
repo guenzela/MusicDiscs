@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_musicdiscs_domain_Album" items="${albums}" z="nvVU+o52iuG5KFpOjPJUarK/qko=">
+        <table:table data="${albums}" id="l_musicdiscs_domain_Album" path="/albums" z="7aFEnT5qNbnEXZQcxlBCiedUl00=">
+			            
+			
+            <table:column id="c_musicdiscs_domain_Album_released" property="released" z="dfpz0WXH93EaKk4DeeOUQQ5zEZM="/>
+            <table:column id="c_musicdiscs_domain_Album_length" property="length" z="uD4HJBeq7+4KrXY5qgMCL0j/pc4="/>
+            
+            <table:column id="c_musicdiscs_domain_Album_tracks" property="tracks" z="oz8rimjZOeYvkM60gujpKcXlvhg="/>
+        <table:column id="c_musicdiscs_domain_Album_rates" property="rates" z="tjU3ZPYzt8YCdQJ7TnmgzHuiygk="/>
+        <table:column id="c_musicdiscs_domain_Album_vote" property="vote" z="Pl4vNYmEVKA4VF8w+JT2z5QQNDw="/>
+        
+        
+        
+        
+        <table:column id="c_musicdiscs_domain_Album_comments" property="comments" z="8BUol9YhsDTZNnII6tesYJaVo/Q="/>
+        </table:table>
+    </page:list>
+</div>
