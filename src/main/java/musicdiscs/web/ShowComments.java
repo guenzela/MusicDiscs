@@ -28,11 +28,13 @@ public class ShowComments {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/show")
-    public void post(ModelMap modelMap,@RequestParam Long id, HttpServletRequest request, HttpServletResponse response, ModelAndView mav) {
+    public ModelAndView post(ModelMap modelMap,@RequestParam Long id, HttpServletRequest request, HttpServletResponse response) {
     	logger.debug("chiamato post{}",id);
     	List<String> comments=Album.findAlbum(id).getComments();
-    	mav.addObject("comments",comments);
-    	
+    	ModelAndView a=new ModelAndView("showcomments/result");
+    	a.addObject("comments",comments);
+    	a.addObject("selected",Album.findAlbum(id));
+    	return a;
     }
 
     @RequestMapping(value="index")

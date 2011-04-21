@@ -4,4 +4,7 @@
     <definition extends="default" name="showcomments/index">
         <put-attribute name="body" value="/WEB-INF/views/showcomments/index.jspx"/>
     </definition>
+    <definition extends="default" name="showcomments/result">
+        <put-attribute name="body" value="/WEB-INF/views/showcomments/result.jspx"/>
+    </definition>
 </tiles-definitions>

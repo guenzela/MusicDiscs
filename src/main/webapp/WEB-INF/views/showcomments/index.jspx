@@ -41,7 +41,6 @@
     			</select>
     		
     		<input type="submit" value="Show Comments"/>
-    			
     		
     </form>
   </util:panel>
